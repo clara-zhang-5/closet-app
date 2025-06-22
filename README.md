@@ -16,6 +16,7 @@ This is a personal project built with HTML, CSS, and JavaScript. It allows users
 
 ## Folder Structure
 
+```
 closet-app/
 |---index.html
 |---style.css
@@ -24,10 +25,11 @@ closet-app/
 |---tops/
 |---bottoms/
 |---shoes/
+```
 
 ---
 
-## tech used
+## Tech Used
 * HTML
 * CSS
 * JavaScript
