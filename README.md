@@ -1,4 +1,4 @@
-# Closet App
+# Closet App (Prototype)
 
 A simple digital closet where you can mix and match tops, bottoms, and shoes using arrow buttons.
 
@@ -37,3 +37,4 @@ closet-app/
 ## Ideas for Future Features
 * Function to save + load outfit combinations
 * Random shuffle button
+* Standardize size for photos
