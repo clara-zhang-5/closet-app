@@ -38,3 +38,4 @@ closet-app/
 * Function to save + load outfit combinations
 * Random shuffle button
 * Standardize size for photos
+* Add functionality to upload photos

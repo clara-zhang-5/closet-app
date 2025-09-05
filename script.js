@@ -10,10 +10,15 @@ const bottoms = [
 const shoes = [
     "assets/shoes/shoes1.png"
 ];
+// create 2d array for saved outfits
+const myOutfits = [];
+
+// set initial src attributes for images
 
 // handle click on left / right buttons for the top
 let curTop = 0;
 const topImg = document.getElementById("top-image");
+topImg.src = tops[curTop];
 // left button
 document.getElementById("top-left").addEventListener("click", () => {
     if(curTop == 0) {
@@ -36,6 +41,7 @@ document.getElementById("top-right").addEventListener("click", () => {
 // handle click on left / right buttons for the bottom
 let curBottom = 0; // set index of the current bottom being shown (0)
 const bottomImg = document.getElementById("bottom-image");
+bottomImg.src = bottoms[curBottom];
 // left button
 document.getElementById("bottom-left").addEventListener("click", () => {
     if(curBottom == 0) {
@@ -58,6 +64,7 @@ document.getElementById("bottom-right").addEventListener("click", () => {
 // handle click on left / right buttons for the shoes
 let curShoes = 0;
 const shoesImg = document.getElementById("shoes-image");
+shoesImg.src = shoes[curShoes];
 // left button
 document.getElementById("shoes-left").addEventListener("click", () => {
     if(curShoes == 0) {
@@ -75,4 +82,19 @@ document.getElementById("shoes-right").addEventListener("click", () => {
         curShoes += 1;
         shoesImg.src = shoes[curShoes];
     }
+});
+
+// save function
+function saveOutfit() {
+    myOutfits.push([tops[curTop], bottoms[curBottom], shoes[curShoes]]);
+}
+
+// handle save button clicked
+document.getElementById("save-button").addEventListener("click", () => {
+    saveOutfit();
+});
+
+// handle load button clicked
+document.getElementById("load-button").addEventListener("click", () => {
+    alert("this should load your saved outfits")
 });
