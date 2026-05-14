@@ -1,15 +1,25 @@
+let numTops = 4;
+let numBottoms = 3;
+let numShoes = 1;
+
 // create array for all top elements
-const tops = [
-    "assets/tops/top1.png", "assets/tops/top2.png"
-];
+let tops = [];
+
+for (let i = 1; i <= numTops; i++) {
+    tops.push(`assets/tops/top${i}.png`);
+}
 // create array for all bottom elements
-const bottoms = [
-    "assets/bottoms/bottom1.png", "assets/bottoms/bottom2.png", "assets/bottoms/bottom3.png"
-];
+let bottoms = [];
+
+for (let i = 1; i <= numBottoms; i++) {
+    bottoms.push(`assets/bottoms/bottom${i}.png`);
+}
 // create array for all shoes elements
-const shoes = [
-    "assets/shoes/shoes1.png"
-];
+let shoes = [];
+
+for (let i = 1; i <= numShoes; i++) {
+    shoes.push(`assets/shoes/shoes${i}.png`);
+}
 // create 2d array for saved outfits
 const myOutfits = [];
 
@@ -30,7 +40,7 @@ document.getElementById("top-left").addEventListener("click", () => {
 });
 // right button
 document.getElementById("top-right").addEventListener("click", () => {
-    if(curTop == tops.length - 1) {
+    if(curTop == numTops - 1) {
         alert("This is the last top in your closet!"); // display an alert that button can't be clicked
     } else {
         curTop += 1;
@@ -53,7 +63,7 @@ document.getElementById("bottom-left").addEventListener("click", () => {
 });
 // right button
 document.getElementById("bottom-right").addEventListener("click", () => {
-    if(curBottom == bottoms.length - 1) {
+    if(curBottom == numBottoms) {
         alert("This is the last bottom in your closet!"); // display an alert that button can't be clicked
     } else {
         curBottom += 1;
@@ -76,7 +86,7 @@ document.getElementById("shoes-left").addEventListener("click", () => {
 });
 // right button
 document.getElementById("shoes-right").addEventListener("click", () => {
-    if(curShoes == shoes.length - 1) {
+    if(curShoes == numShoes) {
         alert("This is the last pair of shoes in your closet!"); // display an alert that button can't be clicked
     } else {
         curShoes += 1;
